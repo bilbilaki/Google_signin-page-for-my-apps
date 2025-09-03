@@ -1,45 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AI Box</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Privacy Policy - AI Box</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app-container">
-        <header>
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                    <img src="logo.png" alt="AI Box Logo">
-                    <h1>AI Box</h1>
-                </a>
-            </div>
-            <nav>
-                <a href="index.html#demo">Demo</a>
-                <a href="https://github.com/bilbilaki/flutter-gpt-box" target="_blank">GitHub</a>
-                <a href="privacy.html">Privacy</a>
-            </nav>
-        </header>
+ <div id="app-container">
+ <header>
+ <div class="logo">
+ <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+ <img src="logo.png" alt="AI Box Logo">
+ <h1>AI Box</h1>
+ </a>
+ </div>
+ <nav>
+ <a href="index.html#demo">Demo</a>
+ <a href="https://github.com/bilbilaki/flutter-gpt-box" target="_blank">GitHub</a>
+ <a href="privacy.html">Privacy</a>
+ </nav>
+ </header>
 
-        <main>
-            <section class="privacy-policy">
-                <h2>Privacy Policy for AI Box</h2>
-                <div id="policy-content">
-                    <div id="loader" class="loader"></div>
-                    <p>Loading privacy policy...</p>
-                </div>
-            </section>
-        </main>
+ <main>
+ <section class="privacy-policy">
+ <h2>Privacy Policy for AI Box</h2>
+ <div id="policy-content">
+<h1>Privacy Policy</h1>
+<p><strong>Last Updated:</strong> 9/3/2025</p>
 
-        <footer>
-            <p>&copy; 2024 AI Box | View on <a href="https://github.com/bilbilaki/flutter-gpt-box" target="_blank">GitHub</a></p>
-            <a href="privacy.html">Privacy Policy</a>
-        </footer>
-    </div>
-    <script src="privacy.js"></script>
+<p>This policy explains how the application <strong>AIBOX</strong> (its a fork of <strong>GPTBOX </strong>) processes your information when you use Google Sign-In and other restricted Google functionalities. This app is designed for personal/limited use by close associates and is not intended for public distribution on stores; the sole purpose of this page is to comply with Google's verification requirements.</p>
+
+<h2>Information We Collect</h2>
+<ul>
+ <li>Basic Google Account information: User ID, name, email, and profile picture (if available).</li>
+ <li>Google access/refresh tokens to enable app functionalities.</li>
+ <li>Minimal usage data (such as error logs) to improve performance and security.</li>
+</ul>
+
+<h2>How We Use Information</h2>
+<ul>
+ <li>To authenticate and sign you into the app.</li>
+ <li>To provide optional features that you enable. For example (if used):</li>
+ <ul>
+ <li>Sending emails on your behalf via Gmail (without reading your inbox).</li>
+ <li>Creating events or reminders in Google Calendar/Tasks.</li>
+ </ul>
+ <li>To maintain security, prevent abuse, and troubleshoot issues.</li>
+</ul>
+
+<h2>Scopes Used</h2>
+<p>We only request the minimum necessary access. Please remove any items you do not use:</p>
+<ul>
+ <li><code>openid</code>, <code>email</code>, <code>profile</code> — For Google Sign-In</li>
+ <li><code>https://www.googleapis.com/auth/gmail.send</code> — Only for sending emails</li>
+ <li><code>https://www.googleapis.com/auth/calendar.events</code> — Create/manage calendar events</li>
+ <li><code>https://www.googleapis.com/auth/tasks</code> — Create/manage reminders in Tasks</li>
+</ul>
+<p>No access beyond the above is requested or used.</p>
+
+<h2>Data Sharing</h2>
+<ul>
+ <li>Your information is not sold or shared for advertising purposes.</li>
+ <li>Data only interacts with Google services to provide your selected functionalities.</li>
+ <li>If legally required, information may be provided as per law.</li>
+</ul>
+
+<h2>Data Retention and Deletion</h2>
+<ul>
+ <li>Access tokens are stored securely and used only for app functionality.</li>
+ <li>By revoking access via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account &gt; Security &gt; Third-party access</a> or by requesting us, access will be immediately terminated.</li>
+ <li>You can send data deletion requests to the email below, and we will reasonably process them as soon as possible.</li>
+</ul>
+
+<h2>Security</h2>
+<p>We use reasonable measures to protect information; however, no method is 100% secure.</p>
+
+<h2>Children</h2>
+<p>This app is not designed for individuals under 13 (or the equivalent minimum age in your country), and we do not knowingly collect data from them.</p>
+
+<h2>Changes</h2>
+<p>This policy may be updated occasionally. The "Last Updated" date will be placed at the top of the page.</p>
+
+<h2>Contact Us</h2>
+<p>For questions, access revocation, or data deletion, please contact us:<br>
+📧 <a href="mailto:i@inosuke.sbs">i@inosuke.sbs</a><br>
+👤 {{DEVELOPER_NAME}}</p>
+ </div>
+ </section>
+ </main>
+
+ <footer>
+ <p>&copy; 2024 AI Box | View on <a href="https://github.com/bilbilaki/flutter-gpt-box" target="_blank">GitHub</a></p>
+ <a href="privacy.html">Privacy Policy</a>
+ </footer>
+ </div>
+ <script src="privacy.js"></script>
 </body>
 </html>
