@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const policyContent = document.getElementById('policy-content');
 
+    // If the `websim` runtime or its chat API is not available (for example when
+    // opening the static HTML file in a browser), avoid throwing an error and
+    // leave the server-generated/static HTML already present in the file.
+    if (typeof window.websim === 'undefined' || !window.websim?.chat?.completions?.create) {
+        // No runtime available; do nothing and keep the existing content.
+        return;
+    }
+
     try {
         const completion = await websim.chat.completions.create({
             messages: [

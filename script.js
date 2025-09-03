@@ -48,15 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 recentHistory.unshift(conversationHistory[0]);
             }
 
-            const completion = await websim.chat.completions.create({
-                messages: recentHistory,
-            });
+            // If the `websim` runtime isn't available (for example viewing the
+            // static page in a browser), don't attempt the network call and
+            // instead show a friendly message.
+            if (typeof window.websim === 'undefined' || !window.websim?.chat?.completions?.create) {
+                console.warn('websim runtime not available; skipping AI call.');
+                const fallback = 'AI backend is not available in this environment.';
+                addMessage('ai', fallback);
+                conversationHistory.push({ role: 'assistant', content: fallback });
+            } else {
+                const completion = await websim.chat.completions.create({
+                    messages: recentHistory,
+                });
 
-            const aiResponse = completion.content;
-            
-            // Add AI response to UI and history
-            addMessage('ai', aiResponse);
-            conversationHistory.push({ role: 'assistant', content: aiResponse });
+                const aiResponse = completion.content;
+                
+                // Add AI response to UI and history
+                addMessage('ai', aiResponse);
+                conversationHistory.push({ role: 'assistant', content: aiResponse });
+            }
 
         } catch (error) {
             console.error('Error fetching AI completion:', error);
